@@ -6,6 +6,7 @@ import Layout from '@theme/Layout';
 import Heading from '@theme/Heading';
 
 import styles from './index.module.css';
+import HomepageFeatures from '../components/HomepageFeatures';
 
 function HomepageHeader() {
   const {siteConfig} = useDocusaurusContext();
@@ -19,8 +20,13 @@ function HomepageHeader() {
         <div className={styles.buttons}>
           <Link
             className="button button--secondary button--lg"
+            to="https://github.com/codexu/note-gen/releases">
+            立即下载
+          </Link>
+          <Link
+            className="button button--secondary button--lg"
             to="/docs/about">
-            立即开始
+            使用文档
           </Link>
         </div>
       </div>
@@ -36,6 +42,7 @@ export default function Home(): ReactNode {
       description="Description will go into a meta tag in <head />">
       <HomepageHeader />
       <main>
+        <HomepageFeatures />
       </main>
     </Layout>
   );
